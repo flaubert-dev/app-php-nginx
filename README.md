@@ -65,11 +65,35 @@ make docker-777
 
 ## Comandos opcionais
 
-- Entrar no app                                                        -> cd ~/app-php-nginx
-- Visualizar chave SSH                                                 -> make view-ssh-key
-- Instalar plugins Oh My Zsh                                           -> make install-plugins
-- Mostra o uso de espaço Docker (imagens, containers, volumes e cache) -> make docker-space 
-- Remove os containers, redes, volumes e imagens associadas            -> make docker-remove
+Entrar no app 
+
+```zsh
+cd ~/app-php-nginx
+```
+
+Visualizar chave SSH
+
+```zsh
+make view-ssh-key
+```
+
+Instalar plugins Oh My Zsh
+
+```zsh
+make install-plugins
+```
+
+Mostra o uso de espaço Docker (imagens, containers, volumes e cache) 
+
+```zsh
+make docker-space
+```
+
+Remove os containers, redes, volumes e imagens associadas
+
+```zsh
+make docker-remove
+```
 
 ## Atalho (opcional)
 
