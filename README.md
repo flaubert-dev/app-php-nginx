@@ -14,7 +14,7 @@ Este repositório tem o objetivo de ajudar na configuração inicial do Ubuntu 2
 3. cd ~/app-php-nginx
 4. rm -fr .git
 5. make go
-6. Reinicie o sistema. Se está usando o WSL com o Ubuntu 22.04 siga este [passo a passo]().
+6. Reinicie o sistema. Se está usando o WSL com o Ubuntu 22.04 siga este [passo a passo](https://github.com/flaubert-dev/app-php-nginx?tab=readme-ov-file#wsl-reiniciar-o-sistema-powershell-como-admin).
 
 ## App (comandos)
 
