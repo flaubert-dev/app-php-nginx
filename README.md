@@ -1,6 +1,6 @@
 # App PHP com Nginx
 
-Este repositório tem o objetivo de ajudar na configuração inicial do Ubuntu 22.04 recém instalado e completamente zerado. Ou seja, será instalado várias ferramentas para facilitar no desenvolvimento de uma aplicação simples com PHP + Nginx. É possível rodar a aplicação e utilizar o phpMyAdmin para treinar e estudar SQL. O MySQL não está conectado na aplicação. Ou seja, a aplicação é só para treinar e estudar o PHP 8. Já o MySQL + phpMyAdmin é para treinar e estudar SQL.
+Este repositório tem o objetivo de ajudar na configuração inicial do Ubuntu 22.04 recém instalado e completamente zerado. Ou seja, será instalado várias ferramentas para facilitar nos testes de um app super simples com PHP + Nginx. É possível rodar a aplicação e utilizar o phpMyAdmin para treinar e estudar SQL. O MySQL não está conectado na aplicação. Ou seja, a aplicação é só para testes, treinar e estudar o PHP 8. Já o MySQL + phpMyAdmin é só para testar, treinar e estudar SQL.
 
 ## Requisitos / Recomendação
 
@@ -33,11 +33,35 @@ Reinicie o sistema. Se está usando o WSL com o Ubuntu 22.04 siga este [passo a 
 
 ## App (comandos)
 
-1. Entrar no app          -> cd ~/app-php-nginx
-2. Instalar / Ligar o app -> make docker-up
-3. Desligar o app         -> make docker-down
-4. Reiniciar o app        -> make docker-restart
-5. Permissões no app      -> make docker-777
+Entrar no app
+
+```zsh
+cd ~/app-php-nginx
+```
+
+Instalar / Ligar o app 
+
+```zsh
+make docker-up
+```
+
+Desligar o app
+
+```zsh
+make docker-down
+```
+
+Reiniciar o app
+
+```zsh
+make docker-restart
+```
+
+Permissões no app
+
+```zsh
+make docker-777
+```
 
 ## Comandos opcionais
 
