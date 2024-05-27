@@ -123,14 +123,48 @@ wsl --set-default-version 2
 
 ## WSL: Desinstalar o Ubuntu 22.04 do WSL (PowerShell como ADMIN)
 
-1. Listar distros instaladas  -> wsl -l -v
-2. Desligar a distribuição    -> wsl --terminate Ubuntu-22.04
-3. Desinstalar a distribuição -> wsl --unregister Ubuntu-22.04
+1. Listar distros instaladas 
+
+```zsh
+wsl -l -v
+```
+
+2. Desligar a distribuição
+
+```zsh
+wsl --terminate Ubuntu-22.04
+```
+
+3. Desinstalar a distribuição 
+
+```zsh
+wsl --unregister Ubuntu-22.04
+```
 
 ## WSL: Reiniciar o sistema (PowerShell como ADMIN)
 
-1. Desligar a distribuição -> wsl --terminate Ubuntu-22.04
-2. Desligar o WSL          -> wsl --shutdown
-3. Ligar o WSL             -> wsl
+1. Desligar a distribuição
+
+```zsh
+wsl --terminate Ubuntu-22.04
+```
+
+2. Desligar o WSL
+
+```zsh
+wsl --shutdown
+```
+
+3. Ligar o WSL
+
+```zsh
+wsl
+```
+
 4. Feche o PowerShell / Abra novamente o terminal do Ubuntu 22.04
-5. Testar se o Docker está funcionando -> docker ps
+
+5. Testar se o Docker está funcionando 
+
+```zsh
+docker ps
+```
