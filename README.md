@@ -103,9 +103,23 @@ No terminal do Ubuntu 22.04 veja a lista de todos os comandos já utilizados:
 
 ## WSL: Windows Subsystem for Linux
 
-1. Instalar o WSL e/ou Ubuntu                    -> wsl --install -d Ubuntu-22.04
-2. Atualizar o WSL                               -> wsl --update
-3. Defina a versão padrão do WSL para a versão 2 -> wsl --set-default-version 2
+1. Instalar o WSL e/ou Ubuntu
+
+```zsh
+wsl --install -d Ubuntu-22.04
+```
+
+2. Atualizar o WSL
+
+```zsh
+wsl --update
+```
+
+3. Defina a versão padrão do WSL para a versão 2 
+
+```zsh
+wsl --set-default-version 2
+```
 
 ## WSL: Desinstalar o Ubuntu 22.04 do WSL (PowerShell como ADMIN)
 
