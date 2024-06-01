@@ -63,6 +63,13 @@ Permissões no app
 make docker-777
 ```
 
+## App (portas)
+
+Após ligar o app:
+
+- Acessar o App: http://localhost
+- Acessar o phpMyAdmin: http://localhost:10777
+
 ## Comandos opcionais
 
 Entrar no app 
