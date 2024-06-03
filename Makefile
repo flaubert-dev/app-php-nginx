@@ -29,8 +29,6 @@ configurar:
 	cp ~/.zshrc ~/.zshrc.orig
 	sed -i 's/ZSH_THEME=".*"/ZSH_THEME="eastwood"/' ~/.zshrc
 	sed -i 's/plugins=(git)/plugins=(git composer nvm node gulp yarn)/' ~/.zshrc
-	sed -i '1i alias wp="docker-compose run wpcli"' ~/.bashrc
-	sed -i '1i alias wp="docker-compose run wpcli"' ~/.zshrc
 
 ligar: 
 	docker-compose up -d
