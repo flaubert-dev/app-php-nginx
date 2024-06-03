@@ -4,8 +4,8 @@ Este repositório tem o objetivo de ajudar na configuração inicial do Ubuntu 2
 
 ## Requisitos / Recomendação
 
-- Ubuntu 22.04 (Instalado do zero / formatado / sem nenhuma instalação) 
-- Ou WSL com o Ubuntu 22.04 (Instalado do zero / formatado / sem nenhuma instalação)
+- Ubuntu 22.04 (Limpo, sem nenhuma instalação) 
+- Ou WSL com o Ubuntu 22.04 (Limpo, sem nenhuma instalação)
 
 ## Instalação (comandos)
 
@@ -26,12 +26,27 @@ rm -fr .git
 ```
 
 ```bash
-make go
+make instalar
 ```
 
-Reinicie o sistema. Se está usando o WSL com o Ubuntu 22.04 siga este [passo a passo](https://github.com/flaubert-dev/app-php-nginx?tab=readme-ov-file#wsl-reiniciar-o-sistema-powershell-como-admin).
+1. Após a conclusão de todas as instalações, use o comando: exit
+2. Só após sair do zsh feche o terminal. 
+3. Logo depois, abra o terminal novamente para concluir a instalação.
+4. Na sequência configure o zsh, execute estes comandos logo abaixo:
 
-## App (comandos)
+```bash
+cd ~/app-php-nginx
+```
+
+```zsh
+make configurar
+```
+
+5. Feche o terminal. 
+6. Logo depois, abra o terminal novamente para concluir a instalação.
+7. Reinicie o sistema. Se está usando o WSL com o Ubuntu 22.04 siga este [passo a passo](#wsl-reiniciar-o-sistema-powershell-como-admin).
+
+## App PHP (comandos)
 
 Entrar no app
 
@@ -39,38 +54,38 @@ Entrar no app
 cd ~/app-php-nginx
 ```
 
-Instalar / Ligar o app 
+Instalar / Ligar
 
 ```zsh
-make docker-up
+make ligar
 ```
 
-Desligar o app
+Desligar
 
 ```zsh
-make docker-down
+make desligar
 ```
 
-Reiniciar o app
+Reiniciar
 
 ```zsh
-make docker-restart
+make reiniciar
 ```
 
-Permissões no app
+Permissões
 
 ```zsh
-make docker-777
+make permitir
 ```
 
-## App (portas)
+## App PHP (portas)
 
 Após ligar o app:
 
 - Acessar o App: http://localhost
 - Acessar o phpMyAdmin: http://localhost:10777
 
-## Comandos opcionais
+## App PHP (comandos opcionais)
 
 Entrar no app 
 
@@ -81,32 +96,26 @@ cd ~/app-php-nginx
 Visualizar chave SSH
 
 ```zsh
-make view-ssh-key
+make ver-ssh-key
 ```
 
 Instalar plugins Oh My Zsh
 
 ```zsh
-make install-plugins
+make instalar-plugins-zsh
 ```
 
 Mostra o uso de espaço Docker (imagens, containers, volumes e cache) 
 
 ```zsh
-make docker-space
+make espaco
 ```
 
 Remove os containers, redes, volumes e imagens associadas
 
 ```zsh
-make docker-remove
+make desinstalar
 ```
-
-## Atalho (opcional)
-
-No terminal do Ubuntu 22.04 veja a lista de todos os comandos já utilizados: 
-
-- CTRL + R e para sair CTRL + C
 
 ## WSL: Windows Subsystem for Linux
 

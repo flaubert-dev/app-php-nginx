@@ -1,12 +1,12 @@
 SHELL := /bin/bash
 
-install-part-1:
+instalacao-parte-1:
 	sudo apt update && sudo apt upgrade -y
 	sudo apt install apparmor apparmor-utils -y
 	sudo apt install docker.io docker-buildx docker-compose -y
 	sudo usermod -aG docker $$USER
 
-install-part-2:
+instalacao-parte-2:
 	sudo apt update && sudo apt upgrade -y
 	sudo apt install nano -y
 	wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
@@ -18,38 +18,43 @@ install-part-2:
 	git config --global core.editor "code --wait"
 	ssh-keygen
 
-install-part-3:
+instalacao-parte-3:
 	sudo apt install zsh -y
 	chsh -s $$(which zsh)
 	sh -c "$$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+instalar: instalacao-parte-1 instalacao-parte-2 instalacao-parte-3
+
+configurar:
 	cp ~/.zshrc ~/.zshrc.orig
 	sed -i 's/ZSH_THEME=".*"/ZSH_THEME="eastwood"/' ~/.zshrc
+	sed -i 's/plugins=(git)/plugins=(git composer nvm node gulp yarn)/' ~/.zshrc
+	sed -i '1i alias wp="docker-compose run wpcli"' ~/.bashrc
+	sed -i '1i alias wp="docker-compose run wpcli"' ~/.zshrc
 
-go: install-part-1 install-part-2 install-part-3
+ligar: 
+	docker-compose up -d
 
-view-ssh-key:
+desligar: 
+	docker-compose down
+
+reiniciar: 
+	docker-compose down && docker-compose up -d
+
+permitir: 
+	sudo chmod -R 777 * && sudo chown -R $$USER:www-data *
+
+espaco: 
+	docker system df
+
+desinstalar: 
+	docker-compose down --volumes --rmi all
+
+ver-ssh-key:
 	@cat ~/.ssh/id_rsa.pub
 
-install-plugins:
+instalar-plugins-zsh:
 	git clone https://github.com/zsh-users/zsh-history-substring-search.git ~/.oh-my-zsh/custom/plugins/zsh-history-substring-search
 	git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 	git clone https://github.com/zsh-users/zsh-autosuggestions.git ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 	git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install
-
-docker-up: 
-	docker-compose up -d
-
-docker-down: 
-	docker-compose down
-
-docker-restart: 
-	docker-compose down && docker-compose up -d
-
-docker-777: 
-	sudo chmod -R 777 * && sudo chown -R $$USER:www-data *
-
-docker-space: 
-	docker system df
-
-docker-remove: 
-	docker-compose down --volumes --rmi all
