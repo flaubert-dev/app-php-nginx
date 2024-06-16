@@ -29,7 +29,7 @@ rm -fr .git
 make instalar
 ```
 
-1. Após a conclusão de todas as instalações, use o comando para sair do Zsh:
+1. Após a conclusão de todas as instalações, use este comando para sair do Zsh:
 
 ```bash
 exit
@@ -37,7 +37,7 @@ exit
 
 2. Só após sair do Zsh é que poderá fechar o terminal. 
 3. Logo depois, abra o terminal novamente.
-4. Na sequência configure o Zsh, execute estes comandos logo abaixo:
+4. Na sequência configure o Zsh, executando os comandos logo abaixo:
 
 ```bash
 cd ~/app-php-nginx
