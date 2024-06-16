@@ -37,7 +37,7 @@ exit
 
 2. Só após sair do Zsh é que poderá fechar o terminal. 
 3. Logo depois, abra o terminal novamente.
-4. Na sequência configure o Zsh, executando os comandos logo abaixo:
+4. Na sequência, configure o Zsh executando os comandos logo abaixo:
 
 ```bash
 cd ~/app-php-nginx
