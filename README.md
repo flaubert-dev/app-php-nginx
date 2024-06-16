@@ -29,10 +29,15 @@ rm -fr .git
 make instalar
 ```
 
-1. Após a conclusão de todas as instalações, use o comando: exit
-2. Só após sair do zsh feche o terminal. 
-3. Logo depois, abra o terminal novamente para concluir a instalação.
-4. Na sequência configure o zsh, execute estes comandos logo abaixo:
+1. Após a conclusão de todas as instalações, use o comando para sair do Zsh:
+
+```bash
+exit
+```
+
+2. Só após sair do Zsh é que poderá fechar o terminal. 
+3. Logo depois, abra o terminal novamente.
+4. Na sequência configure o Zsh, execute estes comandos logo abaixo:
 
 ```bash
 cd ~/app-php-nginx
@@ -42,8 +47,8 @@ cd ~/app-php-nginx
 make configurar
 ```
 
-5. Feche o terminal. 
-6. Logo depois, abra o terminal novamente para concluir a instalação.
+5. Feche o terminal.
+6. Logo depois, abra o terminal novamente para que seja concluído as configurações.
 7. Reinicie o sistema. Se está usando o WSL com o Ubuntu 22.04 siga este [passo a passo](#wsl-reiniciar-o-sistema-powershell-como-admin).
 
 ## App PHP (comandos)
